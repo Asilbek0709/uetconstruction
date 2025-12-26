@@ -576,7 +576,7 @@ footer .page-link {
     color: #000;
   opacity: 1;
 }
-.marquee::before .marquee-arrow-cont{
+.marquee::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -586,6 +586,21 @@ footer .page-link {
   transition: transform 0.4s ease;
   z-index: -1;
 }
+.marquee-arrow-cont {
+  padding: 2rem;
+  background-color: #000;
+  border-radius: 10rem;
+  transition: 0.3s ease-in-out;
+}
+
+.marquee:hover .marquee-arrow-cont {
+  background-color: #ff4e00;
+}
+
+.marquee:hover::before {
+  transform: scaleX(1);
+}
+
 .marquee:hover::before .marquee-arrow-cont{
   transform: scaleX(1);
 }
