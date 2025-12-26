@@ -31,9 +31,9 @@ export default function Footer() {
                         <h1>PAGES</h1>
                         <div className="footer-navigation">
                             <Link className='page-link' href={'/'}>Homepage</Link>
-                            <Link className='page-link' href={'/products'}>Products</Link>
+                            <Link className='page-link' href={'/'}>Products</Link>
                             <Link className='page-link' href={'/services'}>Services</Link>
-                            <Link className='page-link' href={'/projects'}>Projects</Link>
+                            <Link className='page-link' href={'/'}>Projects</Link>
                             <Link className='page-link' href={'/news'}>News</Link>
                         </div>
                     </div>
@@ -41,9 +41,9 @@ export default function Footer() {
                         <h1>ABOUT</h1>
                         <div className="footer-navigation">
                             <Link className='page-link' href={'/'}>About</Link>
-                            <Link className='page-link' href={'/products'}>Structure</Link>
-                            <Link className='page-link' href={'/services'}>Partners</Link>
-                            <Link className='page-link' href={'/projects'}>Licenses and certificates</Link>
+                            <Link className='page-link' href={'/'}>Structure</Link>
+                            <Link className='page-link' href={'/'}>Partners</Link>
+                            <Link className='page-link' href={'/'}>Licenses and certificates</Link>
                         </div>
                     </div>
                     <div className="container4">

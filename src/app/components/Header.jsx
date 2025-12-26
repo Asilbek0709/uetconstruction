@@ -12,9 +12,9 @@ export default function Header() {
                 </div>
                 <div className="right-container">
                     <div className="navigation">
-                        <Link className='page-link' href={'/about'}>About</Link>
+                        <Link className='page-link' href={'/'}>About</Link>
                         <Link className='page-link' href={'/services'}>Services</Link>
-                        <Link className='page-link' href={'/projects'}>Projects</Link>
+                        <Link className='page-link' href={'/'}>Projects</Link>
                         <Link className='page-link' href={'/news'}>News</Link>
                         <Link className='hover-link' href={'/contact'}>Contact</Link>
                         <p>EN</p>
