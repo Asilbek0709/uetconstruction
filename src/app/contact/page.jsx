@@ -59,7 +59,13 @@ export default function Contact() {
             </div>
           </div>
         </div>      
-        <iframe className='google-map' src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.1380823475724!2d69.25632537587313!3d41.2840991713132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b9ab898b5c3%3A0x16cdb4f4b504f05f!2sUET%20Construction!5e0!3m2!1sru!2s!4v1766754801752!5m2!1sru!2s"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe
+          className='google-map'
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.1380823475724!2d69.25632537587313!3d41.2840991713132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b9ab898b5c3%3A0x16cdb4f4b504f05f!2sUET%20Construction!5e0!3m2!1sru!2s!4v1766754801752!5m2!1sru!2s"
+          allowFullScreen
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
       </section>
         <section className="feedback">
             <div className="feedback-info">
