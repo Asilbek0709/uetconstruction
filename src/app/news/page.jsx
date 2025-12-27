@@ -3,7 +3,6 @@
 import '../globals.css'
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-import ArrowIcon from '@/assets/icons/arrow.svg'
 import Link from 'next/link';
 
 export default function News() {
@@ -12,7 +11,9 @@ export default function News() {
       <Header></Header>
       <div className="destination">
           <Link className='destination-link' href={'/'} >Homepage</Link>
-            <ArrowIcon></ArrowIcon>
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 3L11 8L6 13" stroke="#828282" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
           <Link className='destination-link-located' href={'/contact'} >News</Link>
       </div>
       <main className="news-main">
