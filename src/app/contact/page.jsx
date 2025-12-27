@@ -31,28 +31,43 @@ export default function Contact() {
             </div>
           </div>
           <div className="email">
-            <EmailIcon></EmailIcon>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4 12V25C4 25.2652 4.10536 25.5196 4.29289 25.7071C4.48043 25.8946 4.73478 26 5 26H27C27.2652 26 27.5196 25.8946 27.7071 25.7071C27.8946 25.5196 28 25.2652 28 25V12L16 4L4 12Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M13.8125 19L4.3125 25.7125" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M27.6875 25.7125L18.1875 19" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M28 12L18.1875 19H13.8125L4 12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <div className="phone-number">
               <p style={{color: "#5d5d5d"}}>Email</p>
               <p style={{fontWeight: "bold"}}>info@uetconstruction.com</p>
             </div>
           </div>
           <div className="adress">
-            <LocationIcon></LocationIcon>
+            <svg width="54" height="64" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 17C18.2091 17 20 15.2091 20 13C20 10.7909 18.2091 9 16 9C13.7909 9 12 10.7909 12 13C12 15.2091 13.7909 17 16 17Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M26 13C26 22 16 29 16 29C16 29 6 22 6 13C6 10.3478 7.05357 7.8043 8.92893 5.92893C10.8043 4.05357 13.3478 3 16 3C18.6522 3 21.1957 4.05357 23.0711 5.92893C24.9464 7.8043 26 10.3478 26 13Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <div className="phone-number">
               <p style={{color: "#5d5d5d"}}>Address</p>
               <p style={{fontWeight: "bold"}}>Abdulla Kahhar st. 17, Yakkasaroy District, Tashkent city, Uzbekistan</p>
             </div>
           </div>
           <div className="map">
-            <MapIcon></MapIcon>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 23L4 25V7L12 5" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 27L12 23V5L20 9V27Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M20 9L28 7V25L20 27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <div className="phone-number">
               <p style={{color: "#5d5d5d"}}>Reference point</p>
               <p style={{fontWeight: "bold"}}>“Gruzinskiy dvorik”, “Felicita” Residence</p>
             </div>
           </div>
           <div className="hours">
-            <HoursIcon></HoursIcon>
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
+              <path d="M16 9V16H23" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             <div className="phone-number">
               <p style={{color: "#5d5d5d"}}>Working hours</p>
               <p style={{fontWeight: "bold"}}>Everyday 09:00 - 19:00</p>
