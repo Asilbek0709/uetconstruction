@@ -8,13 +8,26 @@ import Link from 'next/link';
 export default function News() {
   return (
     <section className="newspage">
-      <Header></Header>
+      <Header />
       <div className="destination">
-          <Link className='destination-link' href={'/'} >Homepage</Link>
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6 3L11 8L6 13" stroke="#828282" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          <Link className='destination-link-located' href={'/contact'} >News</Link>
+          <Link className='destination-link' href={'/'}>Homepage</Link>
+          <svg 
+            width="16" 
+            height="16" 
+            viewBox="0 0 16 16" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path 
+              d="M6 3L11 8L6 13" 
+              stroke="#828282" 
+              strokeWidth="1.5"
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+          <Link className='destination-link-located' href={'/news'}>News</Link>
       </div>
       <main className="news-main">
           <h1 style={{fontSize: "54px"}}>News</h1>
@@ -72,13 +85,26 @@ export default function News() {
           </div>
           <div className="marquee-content">
             <div className="marquee-arrow-cont">
-              <svg className="marquee-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
+              <svg 
+                className="marquee-arrow"
+                width="18" 
+                height="18" 
+                viewBox="4 4 16 16" 
+                aria-hidden="true"
+              >
+                <path 
+                  d="M4 12h16m0 0l-6-6m6 6l-6 6" 
+                  stroke="currentColor" 
+                  strokeWidth="1.5" 
+                  fill="none" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                />
               </svg>
             </div>
           </div>
         </div>
-      <Footer></Footer>
+      <Footer />
     </section>
   );
 }

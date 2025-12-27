@@ -32,7 +32,7 @@ export default function Slider() {
             className="heroSwiper"
         >
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -40,7 +40,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
                 <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay" >
                         <h1>Waste Water Treatment</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -48,7 +48,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -56,7 +56,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -64,7 +64,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -72,7 +72,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -80,7 +80,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -88,7 +88,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -96,7 +96,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -104,7 +104,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -112,7 +112,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -120,7 +120,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
@@ -128,7 +128,7 @@ export default function Slider() {
                 </div>
             </SwiperSlide>
             <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/image1.png')"}}>
+                <div className="slide" style={{ backgroundImage: "url('/avenue.jpg')"}}>
                     <div className="overlay">
                         <h1>Waste Water Treatment Park</h1>
                         <Link className='hover-link' href={'/contact'}>Services</Link>             
