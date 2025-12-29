@@ -7,35 +7,27 @@ export default function Header() {
 
     return(
         <header>
-                <div className="left-container" style={{marginLeft: "5rem"}}>
+                <Link className='logoLink' href={'/'}>
+                <div className="left-container">
                     <img src="/logo2-footer.svg" alt="" />
                 </div>
+                </Link>
                 <div className="right-container">
                     <div className="navigation">
                         <div className="dropdown">
                             <Link className='page-link' href={'/'}>
-                                About
-                                <svg
-                                    className="arrow"
-                                    width="16"
-                                    height="16"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path
-                                    d="M6 9l6 6 6-6"
-                                    fill="none"
-                                    stroke="#000"
-                                    strokeWidth="2"
-                                    />
+                            About
+                                <svg className="arrow" width="16" height="16" viewBox="0 0 24 24">
+                                    <path d="M6 9l6 6 6-6" fill="none" stroke="#000" strokeWidth="2"/>
                                 </svg>
                             </Link>
                         
                         <div className="dropdown-menu">
-                            <Link className='dropdown-link' href={'/about'}>About</Link>
-                            <Link className='dropdown-link' href={'/about'}>Structure</Link>
-                            <Link className='dropdown-link' href={'/about'}>Our vision</Link>
-                            <Link className='dropdown-link' href={'/about'}>Partners</Link>
-                            <Link className='dropdown-link' href={'/about'}>Licenses</Link>
+                            <Link className='dropdown-link' href={'/about/#about'}>About</Link>
+                            <Link className='dropdown-link' href={'/about/#structure'}>Structure</Link>
+                            <Link className='dropdown-link' href={'/about/#vision'}>Our vision</Link>
+                            <Link className='dropdown-link' href={'/about/#partners'}>Partners</Link>
+                            <Link className='dropdown-link' href={'/about/#licenses'}>Licenses</Link>
                         </div>
                         </div>
                         <Link className='page-link' href={'/services'}>Services</Link>

@@ -33,9 +33,9 @@ export default function ProjectPage() {
         <main className="projects-main">
             <h1>Projects</h1>
             <div className="projects-buttons">
-                <button class="filter-btn active" data-filter="all">All projects</button>
-                <button class="filter-btn" data-filter="ongoing">Ongoing</button>
-                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button className="filter-btn active" data-filter="all">All projects</button>
+                <button className="filter-btn" data-filter="ongoing">Ongoing</button>
+                <button className="filter-btn" data-filter="completed">Completed</button>
             </div>
             <div className="projectspage-container">
                 <div className="projects-card ongoing">

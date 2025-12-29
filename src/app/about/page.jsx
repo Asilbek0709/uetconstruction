@@ -31,50 +31,50 @@ export default function AboutPage() {
               </div>
               <main className="aboutmain">
                 <nav className="aboutnavbar">
-                    <div className="about-card">
+                    <Link href="#about" className="about-card">
                       <p>About</p>
                       <svg className="about-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
                         <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <div className="about-card">
+                    </Link>
+                    <Link href="#history" className="about-card">
                       <p>Company history</p>
                       <svg className="about-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
                         <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <div className="about-card">
+                    </Link>
+                    <Link  href="#vision" className="about-card">
                       <p>Vision and Mission</p>
                       <svg className="about-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
                         <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <div className="about-card">
+                    </Link>
+                    <Link href="#structure" className="about-card">
                       <p>Structure</p>
                       <svg className="about-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
                         <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <div className="about-card">
+                    </Link>
+                    <Link href="#partners" className="about-card">
                       <p>Partners</p>
                       <svg className="about-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
                         <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
                       </svg>
-                    </div>
-                    <div className="about-card">
+                    </Link>
+                    <Link href="#licenses" className="about-card">
                       <p>Licenses and certificates</p>
                       <svg className="about-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
                         <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
                       </svg>
-                    </div>
+                    </Link>
                 </nav>
                 <div className="aboutinformation">
                   <div className="aboutinformation-card">
-                    <h1>About</h1>
+                    <h1 id="about">About</h1>
                     <p><strong>UET Construction,</strong> <br /> established in 2023, provides engineering, procurement, and construction services across various sectors, including power generation, renewable energy, industrial facilities, roads, hospitals, waste water treatment, airports, pumping stations, real estate, bridges and civil infrastructure. We are dedicated to delivering projects that uphold the highest standards of quality, safety, and integrity.</p>
                     <img src="/about1.png" alt="" />
                   </div>
-                  <div className="aboutinformation-card">
+                  <div id="history" className="aboutinformation-card">
                     <h1>Company history</h1> <br /> 
                     <div className="aboutinformation-card-desc">
                       <div className="card-desc-info">
@@ -89,7 +89,7 @@ export default function AboutPage() {
                     </div>
                     <p>eco-friendly materials, and construction techniques that minimize environmental impact.</p>
                   </div>
-                  <div className="aboutinformation-card">
+                  <div id="vision" className="aboutinformation-card">
                     <h1>Our vision</h1>
                     <div className="aboutinformation-card-desc">
                         <div className="card-desc-info">
@@ -109,13 +109,13 @@ export default function AboutPage() {
                         </div>
                     </div>
                   </div>
-                  <div className="aboutinformation-card">
+                  <div id="structure" className="aboutinformation-card">
                     <h1>Organizational management structure</h1>
                   </div>
-                  <div className="aboutinformation-card">
+                  <div id="partners" className="aboutinformation-card">
                     <h1>Partners</h1>
                   </div>
-                  <div className="aboutinformation-card">
+                  <div id="licenses" className="aboutinformation-card">
                     <div className="licenses">
                       <h1>Licenses and certificates</h1> <br />
                       <h2>ISO 9001:2015, ISO 14001:2015 and ISO 45001:2018</h2> <br />
@@ -129,7 +129,7 @@ export default function AboutPage() {
                   </div>
                 </div>
               </main>
-              <section className="feedback">
+            <section className="feedback">
                   <div className="feedback-info">
                     <h1>Work with us</h1>
                     <p>Join our innovative and collaborative team! We are always looking for talented individuals ready to make a difference. Upload resume and start your journey with us.</p>

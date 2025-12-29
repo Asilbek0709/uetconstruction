@@ -159,7 +159,7 @@ export default function Home() {
         <section className="feedback">
             <div className="feedback-info">
               <h1>Work with us</h1>
-              <p>Join our innovative and collaborative team! We are always looking for talented individuals ready to make a difference. Upload resume and start your journey with us.</p>
+              <p>Join our innovative and collaborative team! We are<br /> always looking for talented individuals ready to make a<br /> difference. Upload resume and start your journey with<br /> us.</p>
               <Link href={'/contact'} className='cv-link'>UPLOAD YOUR RESUME</Link>
             </div>
             <div className="feedback-photo">
