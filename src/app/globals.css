@@ -30,6 +30,10 @@ header {
     position: fixed;
     z-index: 999;
 }
+.header {
+  width: 100%;
+  display: flex;
+}
 
 .left-container{
   margin-left: 2rem;
@@ -40,6 +44,7 @@ header {
     gap: 30px;
     align-items: center;
     margin-right: 6rem;
+    justify-content: center;
 }
 
 .page-link, .hover-link {
@@ -51,19 +56,19 @@ header {
 
 .hover-link {
     padding: 16px 38px 16px 38px;
-    background-color: #ff4e00;
+    background-color: #213981;
     color: #fff;
     width: 142px;
     text-align: center;
     transition: 0.3s ease-in-out;
-    border: 0.5px solid #ff4e00;
+    border: 0.5px solid #213981;
     text-decoration: none;
 }
 
 .hover-link:hover {
     background-color: #fff;
-    border: 0.5px solid #ff4e00;
-    color: #ff4e00;
+    border: 0.5px solid #213981;
+    color: #213981;
 }
 
 footer {
@@ -109,19 +114,20 @@ footer .page-link {
 }
 
 .page-link:hover, .hover-link:hover {
-    color: #ff4e00;
+    color: #213981;
 }
 .page-link:hover path{
   stroke: #ff4e00;
 }
 
 .heroSwiper {
-  max-width: 85vw;
+  max-width: 80vw;
+
   height: 80vh;
 }
 
 .slide {
-  max-width: 85vw;
+  max-width: 80vw;
   height: 80vh;
   background-size: cover;
   background-position: center;
@@ -214,11 +220,11 @@ footer .page-link {
 .home-hover-link, .home-hover-link-special {
     padding: 1rem;
     background-color: #fff;
-    color: #ff4e00;
+    color: #213981;
     width: 8rem;
     text-align: center;
     transition: 0.3s ease-in-out;
-    border: 0.5px solid #ff4e00;
+    border: 0.5px solid #213981;
     text-decoration: none;
     font-size: 16px;
     margin-top: 4rem;
@@ -229,7 +235,7 @@ footer .page-link {
 }
 
 .home-hover-link:hover, .home-hover-link-special:hover {
-    background-color: #ff4e00;
+    background-color: #213981;
     color: #fff;
 }
 
@@ -287,9 +293,9 @@ footer .page-link {
 }
 
 .service:hover {
-    color: #ff4e00;
-    stroke: #ff4e00;
-    fill: #ff4e00;
+    color: #213981;
+    stroke: #213981;
+    fill: #213981;
 }
 
 .line2 {
@@ -318,7 +324,7 @@ footer .page-link {
 }
 
 .arrow:hover {
-  color: #ff4e00;
+  color: #213981;
 }
 
 /* Projects */
@@ -329,7 +335,6 @@ footer .page-link {
   padding: 7rem;
   justify-content: center;
   align-items: center;
-  /* <CHANGE> added width: 100% to prevent overflow */
   width: 100%;
 }
 
@@ -395,7 +400,7 @@ footer .page-link {
 .project-overlay {
   padding: 0.3rem;
   color: #fff;
-  background-color: #ff4e00;
+  background-color: #213981;
   margin: 1rem;
   font-size: 14px;
 }
@@ -414,7 +419,7 @@ footer .page-link {
 
 .more-info {
   text-decoration: none;
-  color: #ff4e00;
+  color: #213981;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -469,7 +474,7 @@ footer .page-link {
 
 .cv-link:hover {
   background-color: #fff;
-  color: #ff4e00;
+  color: #213981;
 }
 
 /* NEWS */
@@ -480,7 +485,7 @@ footer .page-link {
   justify-content: center;
   align-items: center;
   padding: 8rem;
-  /* <CHANGE> added width: 100% to prevent overflow */
+
   width: 100%;
 }
 
@@ -525,7 +530,7 @@ footer .page-link {
 }
 
 .news-card:hover .news-info {
-  color: #ff4e00;
+  color: #213981;
 }
 
 /* Marquee */
@@ -580,7 +585,7 @@ footer .page-link {
     color: #000;
   opacity: 1;
 }
-/* Псевдоэлемент ::before */
+
 .marquee::before {
   content: "";
   position: absolute;
@@ -591,7 +596,6 @@ footer .page-link {
   z-index: -1;
 }
 
-/* Элемент стрелки */
 .marquee-arrow-cont {
   padding: 2rem;
   background-color: #000;
@@ -599,13 +603,13 @@ footer .page-link {
   transition: 0.3s ease-in-out;
 }
 
-/* Ховер на стрелку и псевдоэлемент */
+
 .marquee:hover::before {
   transform: scaleX(1);
 }
 
 .marquee:hover .marquee-arrow-cont {
-  background-color: #ff4e00;
+  background-color: #213981;
 }
 
 @keyframes marquee {
@@ -658,7 +662,7 @@ footer .page-link {
   gap: 0.25rem;
   padding: 2rem;
   margin-left: 4rem;
-  margin-top: 6rem;
+  margin-top: 1rem;
 }
 .destination-link{
   text-decoration: none;
@@ -841,7 +845,7 @@ body {
     }
     
     .projects-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: fr;
         gap: 1rem;
         margin-top: 2rem;
         margin-bottom: 2rem;
@@ -1223,10 +1227,12 @@ html {
 .dropdown {
   position: relative;
   display: flex;
-  /* align-items: center; */
-  justify-content: center;
 }
-
+.dropdown .page-link{
+  display: flex;
+  align-items: center;
+  gap: 0.05rem;
+}
 .dropdown-link {
   display: flex;
   align-items: center;
@@ -1266,11 +1272,13 @@ html {
   opacity: 1;
   visibility: visible;
   transform: translateY(0);
+  color: #213981;
 }
 
 .dropdown:hover .arrow,
 .dropdown:focus-within .arrow {
   transform: rotate(180deg);
+  color: #213981;
 }
 
 /* About Page */
@@ -1361,47 +1369,104 @@ html {
 }
 
 /* Projects Section */
-.projects-main {
+/* ===== BASE (Laptop / Desktop — твой текущий вариант) ===== */
+
+.filterContainer {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 1.5rem;
-  padding: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
 
-.projectspage-container {
+.filterBtn {
+  width: 182px;
+  padding: 1.25rem;
+  background-color: #fff;
+  border: 0.5px solid #213981;
+  color: #213981;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.filterBtnActive {
+  background-color: #213981;
+  color: #fff;
+}
+
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projectsGrid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+  padding: 2rem;
+  gap: 1rem;
   width: 100%;
   max-width: 1200px;
 }
 
-.projects-buttons {
-  display: flex;
-  gap: 1rem;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.projects-buttons button {
-  padding: 16px 38px;
+.projectCard {
+  padding: 1rem;
   background-color: #fff;
-  color: #ff4e00;
-  width: 182px;
-  text-align: center;
-  transition: 0.3s ease-in-out;
-  border: 0.5px solid #ff4e00;
-  text-decoration: none;
-  font-size: 18px;
-  cursor: pointer;
+  border: none;
 }
 
-.projects-buttons button:hover {
-  background-color: #ff4e00;
-  color: #fff;
+/* ===== TABLET (≤ 1024px) ===== */
+
+@media (max-width: 1024px) {
+  .filterBtn {
+    width: 160px;
+    padding: 1rem;
+    font-size: 16px;
+  }
+
+  .projectsGrid {
+    padding: 1.5rem;
+    gap: 1rem;
+  }
 }
+
+/* ===== MOBILE (≤ 768px) ===== */
+
+@media (max-width: 768px) {
+  .filterContainer {
+    flex-direction: column;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .filterBtn {
+    width: 100%;
+    max-width: 320px;
+    font-size: 16px;
+    padding: 0.9rem;
+  }
+
+  .projectsGrid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+
+  .projectCard {
+    padding: 0.75rem;
+  }
+}
+
+/* ===== SMALL MOBILE (≤ 480px) ===== */
+
+@media (max-width: 480px) {
+  .filterBtn {
+    font-size: 15px;
+    padding: 0.75rem;
+  }
+}
+
 
 /* Tablet Responsive */
 @media (max-width: 1024px) {
@@ -1747,5 +1812,94 @@ html {
   }
   .location {
     width: 23rem;
+  }
+}
+/* ===== HEADER BASE ===== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 1rem 0rem;
+  position: relative;
+  gap: 15rem;
+  background-color: #fff;
+}
+
+.left-container img {
+  height: 40px;
+}
+
+/* ===== BURGER ===== */
+
+.burger {
+  display: none;
+  width: 32px;
+  height: 22px;
+  flex-direction: column;
+  justify-content: space-between;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.burger span {
+  width: 100%;
+  height: 3px;
+  background: #000;
+  transition: 0.3s;
+}
+
+/* крестик */
+.burger.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.burger.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== MOBILE MENU ===== */
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 70%;
+  height: 50vh;
+  background: #fff;
+  padding: 6rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: right 0.3s ease;
+  z-index: 1000;
+}
+
+.mobile-link{
+  font-size: 20px;
+  color: #000;
+  text-decoration: none;
+  margin-top: 1.5rem;
+}
+
+.mobileMenu.show {
+  right: 0;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+  .right-container {
+    display: none;
+  }
+
+  .burger {
+    display: flex;
   }
 }

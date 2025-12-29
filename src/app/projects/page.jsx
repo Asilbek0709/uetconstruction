@@ -1,662 +1,123 @@
 "use client"
 
+import { useState } from "react"
+import styles from '../globals.css'
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Link from "next/link"
 
-export default function ProjectPage() {
+export default function ProjectsPage() {
+  const projects = [
+    {
+      id: 1,
+      title: "E-commerce Platform",
+      description: "A full-featured online store with payment integration and inventory management.",
+      status: "successful",
+    },
+    {
+      id: 2,
+      title: "Mobile App Redesign",
+      description: "Complete UI/UX overhaul of the existing mobile application.",
+      status: "successful",
+    },
+    {
+      id: 3,
+      title: "AI Chat Assistant",
+      description: "Intelligent chatbot powered by machine learning for customer support.",
+      status: "planned",
+    },
+    {
+      id: 4,
+      title: "Data Analytics Dashboard",
+      description: "Real-time analytics and reporting dashboard for business insights.",
+      status: "successful",
+    },
+    {
+      id: 5,
+      title: "Cloud Migration",
+      description: "Migration of legacy systems to modern cloud infrastructure.",
+      status: "planned",
+    },
+    {
+      id: 6,
+      title: "API Gateway Upgrade",
+      description: "Modernize and optimize the API gateway for improved performance.",
+      status: "planned",
+    },
+  ]
 
-    
-    return(
-        <section className="projectpage">
-            <Header></Header>
-                <div className="destination">
-            <Link className='destination-link' href={'/'} >Homepage</Link>
-                        <svg 
-                width="16" 
-                height="16" 
-                viewBox="0 0 16 16" 
-                fill="none" 
-                xmlns="http://www.w3.org/2000/svg"
-                aria-hidden="true"
-            >
-                <path 
-                d="M6 3L11 8L6 13" 
-                stroke="#828282" 
-                strokeWidth="1.5"
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-                />
-            </svg>
-            <Link className='destination-link-located' href={'/contact'} >Projects</Link>
+  const [filter, setFilter] = useState("all")
+
+  const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.status === filter)
+
+  const filters = [
+    { label: "All Projects", value: "all" },
+    { label: "Successful", value: "successful" },
+    { label: "Planned", value: "planned" },
+  ]
+
+  return (
+    <div >
+      <div className="projects-main">
+        <Header></Header>
+          <div className="destination">
+          <Link className='destination-link' href={'/'} >Homepage</Link>
+                      <svg 
+            width="16" 
+            height="16" 
+            viewBox="0 0 16 16" 
+            fill="none" 
+            xmlns="http://www.w3.org/2000/svg"
+            aria-hidden="true"
+          >
+            <path 
+              d="M6 3L11 8L6 13" 
+              stroke="#828282" 
+              strokeWidth="1.5"
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+            />
+          </svg>
+          <Link className='destination-link-located' href={'/contact'} >Projects</Link>
         </div>
-        <main className="projects-main">
-            <h1>Projects</h1>
-            <div className="projects-buttons">
-                <button className="filter-btn active" data-filter="all">All projects</button>
-                <button className="filter-btn" data-filter="ongoing">Ongoing</button>
-                <button className="filter-btn" data-filter="completed">Completed</button>
+        <div className="projects-container">
+            <div className="filterContainer">
+              {filters.map((btn) => (
+                <button
+                  key={btn.value}
+                  onClick={() => setFilter(btn.value)}
+                  className={`${"filterBtn"} ${filter === btn.value ? "filterBtnActive" : "filterBtnInactive"}`}
+                >
+                  {btn.label}
+                </button>
+              ))}
             </div>
-            <div className="projectspage-container">
-                <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
+
+          <div className="projectsGrid">
+            {filteredProjects.length > 0 ? (
+              filteredProjects.map((project) => (
+                <div key={project.id} className="projectCard">
+                  <div className="badgeContainer">
+                    <span
+                      className={`${"badge"} ${project.status === "successful" ? "badgeSuccess" : "badgePlanned"}`}
+                    >
+                      {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
+                    </span>
                   </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
+                  <h3 className="projectTitle">{project.title}</h3>
+                  <p className="projectDescription">{project.description}</p>
+                </div>
+              ))
+            ) : (
+              <div className="noResults">
+                <p>No projects found for the selected filter.</p>
               </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card ongoing">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Ongoing
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-1"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>500/200/20 kV ARGHANDE NEW SUBSTATION PROJECT (200 km)</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Kabul, Afghanistan   SCOPE OF WORK Procurement and Construction Supply of All...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-2"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                        <h1>BUILDING OF THE MINISTRY OF HEALTH</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p> Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-3"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>BUILDING OF THE MINISTRY OF ENERGY</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-              <div className="projects-card completed">
-                  <div className="project-preview">
-                    <div className="project-photo-4"></div>
-                    <div className="project-overlay">
-                      Completed
-                    </div>
-                  </div>
-                  <div className="project-info">
-                    <div className="project-tittle">
-                      <h1>YANGI TOSHKENT LOT 33A-33B</h1>
-                    </div>
-                    <div className="project-desc">
-                      <p>Location: Tashkent, Uzbekistan   SCOPE OF WORK Engineering Procurement Construction...</p>
-                    </div>
-                    <Link href={"/projects"} className="more-info"> 
-                      Learn More
-                      <svg className="info-arrow"width="18"height="18"viewBox="4 4 16 16" aria-hidden>
-                        <path d="M4 12h16m0 0l-6-6m6 6l-6 6"stroke="currentColor"strokeWidth="1.5"fill="none"strokeLinecap="round"strokeLinejoin="round"/>
-                      </svg>
-                    </Link>
-                  </div>
-              </div>
-            </div>
-        </main>
-            <Footer></Footer>
-        </section>
-    )
+            )}
+          </div>
+        </div>
+      </div>
+      <Footer></Footer>
+    </div>
+    
+  )
 }
