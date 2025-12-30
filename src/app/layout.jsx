@@ -1,11 +1,13 @@
 import "./globals.css";
-
+import I18nProvider from "./components/I18nProvider";
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="uz">
       <body>
-        {children}
+        <I18nProvider>
+          {children}
+        </I18nProvider>
       </body>
     </html>
   );

@@ -1,17 +1,22 @@
 "use client"
 
-import '../globals.css'
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+
+import Header from "../components/Header"
+import Footer from "../components/Footer"
 import Link from 'next/link';
+import "../globals.css"
+import { useTranslation } from "react-i18next";
 
 
 export default function Contact() {
+
+  const { t } = useTranslation()
+
   return (
     <section className="contactpage">
       <Header></Header>
       <div className="destination">
-          <Link className='destination-link' href={'/'} >Homepage</Link>
+          <Link className='destination-link' href={'/'} >{t("homepage")}</Link>
                       <svg 
             width="16" 
             height="16" 
@@ -28,9 +33,9 @@ export default function Contact() {
               strokeLinejoin="round"
             />
           </svg>
-          <Link className='destination-link-located' href={'/contact'} >Contacts</Link>
+          <Link className='destination-link-located' href={'/contact'} >{t("dropdown-link-contact")}</Link>
       </div>
-      <h1 style={{textAlign: "center", fontSize: "54px"}}>Contacts</h1>
+      <h1 style={{textAlign: "center", fontSize: "54px"}}>{t("dropdown-link-contact")}</h1>
       <section className="location">
         <div className="location-info">
           <div className="phone">
@@ -64,7 +69,7 @@ export default function Contact() {
               />
             </svg>
             <div className="phone-number">
-              <p style={{color: "#5d5d5d"}}> Phone</p>
+              <p style={{color: "#5d5d5d"}}>{t("colored-phone")}</p>
               <p style={{fontWeight: "bold"}}>+998 77 443 00 33</p>
             </div>
           </div>
@@ -106,8 +111,8 @@ export default function Contact() {
             />
           </svg>
                       <div className="phone-number">
-              <p style={{color: "#5d5d5d"}}>Email</p>
-              <p style={{fontWeight: "bold"}}>info@uetconstruction.com</p>
+              <p style={{color: "#5d5d5d"}}>{t("colored-email")}</p>
+              <p style={{fontWeight: "bold"}}>ienergy24h@gmail.com</p>
             </div>
           </div>
           <div className="adress">
@@ -134,43 +139,8 @@ export default function Contact() {
               />
             </svg>
             <div className="phone-number">
-              <p style={{color: "#5d5d5d"}}>Address</p>
-              <p style={{fontWeight: "bold"}}>Abdulla Kahhar st. 17, Yakkasaroy District, Tashkent city, Uzbekistan</p>
-            </div>
-          </div>
-          <div className="map">
-            <svg 
-              width="32" 
-              height="32" 
-              viewBox="0 0 32 32" 
-              fill="none" 
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path 
-                d="M12 23L4 25V7L12 5" 
-                stroke="black" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-              <path 
-                d="M20 27L12 23V5L20 9V27Z" 
-                stroke="black" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-              <path 
-                d="M20 9L28 7V25L20 27" 
-                stroke="black" 
-                strokeWidth="2" 
-                strokeLinecap="round" 
-                strokeLinejoin="round"
-              />
-            </svg>
-            <div className="phone-number">
-              <p style={{color: "#5d5d5d"}}>Reference point</p>
-              <p style={{fontWeight: "bold"}}>“Gruzinskiy dvorik”, “Felicita” Residence</p>
+              <p style={{color: "#5d5d5d"}}>{t("colored-address")}</p>
+              <p style={{fontWeight: "bold"}}>{t("address")}</p>
             </div>
           </div>
           <div className="hours">
@@ -196,14 +166,15 @@ export default function Contact() {
               />
             </svg>
             <div className="phone-number">
-              <p style={{color: "#5d5d5d"}}>Working hours</p>
-              <p style={{fontWeight: "bold"}}>Everyday 09:00 - 19:00</p>
+              <p style={{color: "#5d5d5d"}}>{t("working-hours-title")}</p>
+              <p style={{fontWeight: "bold"}}>{t("working-hours")}</p>
             </div>
           </div>
         </div>      
         <iframe
           className='google-map'
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.1380823475724!2d69.25632537587313!3d41.2840991713132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8b9ab898b5c3%3A0x16cdb4f4b504f05f!2sUET%20Construction!5e0!3m2!1sru!2s!4v1766754801752!5m2!1sru!2s"
+          src=
+          "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d377.75225364972243!2d72.35796137763643!3d40.76162819124783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcece90bd61d69%3A0x844968c0dcf151c7!2z0JDQs9GA0L7QsdCw0L3Qug!5e0!3m2!1sru!2s!4v1767096115077!5m2!1sru!2s"
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
@@ -211,12 +182,12 @@ export default function Contact() {
       </section>
         <section className="feedback">
             <div className="feedback-info">
-              <h1>Work with us</h1>
-              <p>Join our innovative and collaborative team! We are always looking for talented individuals ready to make a difference. Upload resume and start your journey with us.</p>
-              <Link href={'/contact'} className='cv-link'>UPLOAD YOUR RESUME</Link>
+              <h1>{t("feedback-info-h1")}</h1>
+              <p>{t("feedback-info-p")}</p>
+              <Link href={'/contact'} className='cv-link'>{t("cv-link")}</Link>
             </div>
             <div className="feedback-photo">
-            <img src="/feedback.jpg" alt="" />
+              <img src="/feedback.jpg" alt="" />
             </div>
         </section>
       <Footer></Footer>

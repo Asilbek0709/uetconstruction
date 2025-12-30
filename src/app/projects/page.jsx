@@ -1,52 +1,48 @@
 "use client"
 
 import { useState } from "react"
-import styles from '../globals.css'
+
 import Header from "../components/Header"
 import Footer from "../components/Footer"
 import Link from "next/link"
+import "../globals.css"
+import Modal from "../components/Modal" // добавим модальное окно
+import { useTranslation } from "react-i18next"
+
+
 
 export default function ProjectsPage() {
+
+  const { t } = useTranslation()
+
   const projects = [
     {
       id: 1,
-      title: "E-commerce Platform",
+      title: t("homepage"),
       description: "A full-featured online store with payment integration and inventory management.",
       status: "successful",
+      details: "This project included payment gateways, inventory management, and responsive UI."
     },
     {
       id: 2,
       title: "Mobile App Redesign",
       description: "Complete UI/UX overhaul of the existing mobile application.",
       status: "successful",
+      details: "Redesigned for better usability and performance across devices."
     },
     {
       id: 3,
       title: "AI Chat Assistant",
       description: "Intelligent chatbot powered by machine learning for customer support.",
       status: "planned",
+      details: "Will provide automated responses and analytics for customer queries."
     },
-    {
-      id: 4,
-      title: "Data Analytics Dashboard",
-      description: "Real-time analytics and reporting dashboard for business insights.",
-      status: "successful",
-    },
-    {
-      id: 5,
-      title: "Cloud Migration",
-      description: "Migration of legacy systems to modern cloud infrastructure.",
-      status: "planned",
-    },
-    {
-      id: 6,
-      title: "API Gateway Upgrade",
-      description: "Modernize and optimize the API gateway for improved performance.",
-      status: "planned",
-    },
+    // остальные проекты...
   ]
 
   const [filter, setFilter] = useState("all")
+  const [selectedProject, setSelectedProject] = useState(null) // выбранный проект
+  const [isOpen, setIsOpen] = useState(false) // состояние модалки
 
   const filteredProjects = filter === "all" ? projects : projects.filter((project) => project.status === filter)
 
@@ -56,13 +52,23 @@ export default function ProjectsPage() {
     { label: "Planned", value: "planned" },
   ]
 
+  const openModal = (project) => {
+    setSelectedProject(project)
+    setIsOpen(true)
+  }
+
+  const closeModal = () => {
+    setSelectedProject(null)
+    setIsOpen(false)
+  }
+
   return (
-    <div >
+    <div>
       <div className="projects-main">
-        <Header></Header>
-          <div className="destination">
-          <Link className='destination-link' href={'/'} >Homepage</Link>
-                      <svg 
+        <Header />
+        <div className="destination">
+          <Link className='destination-link' href={'/'}>Homepage</Link>
+          <svg 
             width="16" 
             height="16" 
             viewBox="0 0 16 16" 
@@ -78,29 +84,33 @@ export default function ProjectsPage() {
               strokeLinejoin="round"
             />
           </svg>
-          <Link className='destination-link-located' href={'/contact'} >Projects</Link>
+          <Link className='destination-link-located' href={'/contact'}>Projects</Link>
         </div>
-        <div className="projects-container">
-            <div className="filterContainer">
-              {filters.map((btn) => (
-                <button
-                  key={btn.value}
-                  onClick={() => setFilter(btn.value)}
-                  className={`${"filterBtn"} ${filter === btn.value ? "filterBtnActive" : "filterBtnInactive"}`}
-                >
-                  {btn.label}
-                </button>
-              ))}
-            </div>
+
+        <div className="projects-container-main" style={{display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center"}}>
+          <div className="filterContainer">
+            {filters.map((btn) => (
+              <button
+                key={btn.value}
+                onClick={() => setFilter(btn.value)}
+                className={`${"filterBtn"} ${filter === btn.value ? "filterBtnActive" : "filterBtnInactive"}`}
+              >
+                {btn.label}
+              </button>
+            ))}
+          </div>
 
           <div className="projectsGrid">
             {filteredProjects.length > 0 ? (
               filteredProjects.map((project) => (
-                <div key={project.id} className="projectCard">
+                <div 
+                  key={project.id} 
+                  className="projectCard"
+                  onClick={() => openModal(project)} // добавляем клик для открытия модалки
+                  style={{cursor: "pointer"}}
+                >
                   <div className="badgeContainer">
-                    <span
-                      className={`${"badge"} ${project.status === "successful" ? "badgeSuccess" : "badgePlanned"}`}
-                    >
+                    <span className={`${"badge"} ${project.status === "successful" ? "badgeSuccess" : "badgePlanned"}`}>
                       {project.status.charAt(0).toUpperCase() + project.status.slice(1)}
                     </span>
                   </div>
@@ -116,8 +126,15 @@ export default function ProjectsPage() {
           </div>
         </div>
       </div>
-      <Footer></Footer>
+
+      <Footer />
+
+      {isOpen && selectedProject && (
+        <Modal onClose={closeModal}>
+          <h2>{selectedProject.title}</h2>
+          <p>{selectedProject.details}</p>
+        </Modal>
+      )}
     </div>
-    
   )
 }
