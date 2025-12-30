@@ -23,6 +23,7 @@ export default function Home() {
               <Link className='home-hover-link' href={'/contact'}>{t("home-hover-link-partners")}</Link>
               <Link className='home-hover-link-special' href={'/contact'}>{t("home-hover-link-licenses")}</Link>
             </div>
+        </section>
           <div className="home-about-variations">
             <Link className='home-service-link' href={'/services'}>
               <div className="service-card">
@@ -63,7 +64,7 @@ export default function Home() {
                   <div className="line2"></div>
             </div>
           </div>
-        </section>
+        
         <section className="projects">
             <h1>{t("projects-section")}</h1>
             <div className="projects-container">

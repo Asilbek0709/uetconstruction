@@ -90,7 +90,6 @@ export default function Header() {
         <Link className="mobile-link" href="/about" onClick={() => setOpen(false)}>{t("dropdown-link-about")}</Link>
         <Link className="mobile-link" href="/services" onClick={() => setOpen(false)}>{t("dropdown-link-services")}</Link>
         <Link className="mobile-link" href="/projects" onClick={() => setOpen(false)}>{t("dropdown-link-project")}</Link>
-        <Link className="mobile-link" href="/news" onClick={() => setOpen(false)}>{t("dropdown-link-news")}</Link>
         <Link className="mobile-link" href="/contact" onClick={() => setOpen(false)}>{t("dropdown-link-contact")}</Link>
         <div className="language-dropdown">
           <button className="language-dropdown-button" onClick={() => i18n.changeLanguage("uz")}>UZ

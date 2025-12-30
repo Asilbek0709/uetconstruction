@@ -31,7 +31,7 @@ export default function AboutPage() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <Link className='destination-link-located' href={'/contact'} >{t()}</Link>
+                <Link className='destination-link-located' href={'/contact'} >{t("dropdown-link-about")}</Link>
               </div>
               <main className="aboutmain">
                 <div className="aboutinformation">
