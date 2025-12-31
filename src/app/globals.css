@@ -1094,13 +1094,7 @@ footer .page-link {
     
     .slide {
         height: 50vh;
-    }
-    
-    .overlay h1 {
-        font-size: 1.8rem;
-        padding: 0 1rem;
-    }
-    
+    }    
     .heroSwiper .swiper-button-prev,
     .heroSwiper .swiper-button-next {
         display: none;
@@ -1118,12 +1112,6 @@ footer .page-link {
         justify-content: center;
         align-items: center;
     }
-    
-    .about h1 {
-        font-size: 28px;
-        margin-top: 2rem;
-    }
-    
     .home-about-navigation {
         display: flex;
         justify-content: center;
@@ -1386,6 +1374,12 @@ footer .page-link {
     
     .licenses-photo {
         grid-template-columns: 1fr;
+    }
+    h1{
+        font-size: 24px;
+    }
+    p{
+        font-size: 20px;
     }
 }
 

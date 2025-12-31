@@ -50,13 +50,12 @@ export default function AboutPage() {
                         </p>
                       </div>
                     </div>
-                    <p></p>
                   </div>
                   <div className="aboutinformation-card">
                     <h1>{t("aboutinformation-card3-title")}:</h1>
                     <div className="aboutinformation-card-desc">
                         <div className="card-desc-info">
-                          <p style={{fontSize: "20px"}}>{t("foundation")}: 2023 <br />
+                          <p>{t("foundation")}: 2023 <br />
                             {t("sta")}: <br />
                             {t("andijan")} <br />
                             {t("tashkent")} <br />
@@ -78,7 +77,7 @@ export default function AboutPage() {
                   <div className="aboutinformation-card">
                     <div className="licenses">
                       <h1>{t("certificate")}</h1> <br />
-                      <p style={{fontSize: "20px"}}>{t("certificares-info")}</p>
+                      <p>{t("certificares-info")}</p>
                       <div className="licenses-photo">
                         <img src="/license1.jpg" alt="" />
                         <img src="/license3.jpg" alt="" />
