@@ -777,7 +777,7 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-        padding: 2rem 1rem;
+      margin-left: 0;
     }
     
     .about h1 {
