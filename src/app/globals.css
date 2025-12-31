@@ -1064,6 +1064,13 @@ footer .page-link {
     border: none;
     background: transparent;
 }
+.adress{
+    display: flex;
+}
+.adress svg{
+    width: 32px;
+    height: 32px;
+}
 
 /* RESPONSIVE DESIGN */
 
@@ -1381,6 +1388,10 @@ footer .page-link {
     p{
         font-size: 20px;
     }
+    .adress svg{
+        width: 32px;
+        height: 32px;
+    }
 }
 
 /* ПЛАНШЕТЫ (769px - 1024px) */
@@ -1596,6 +1607,10 @@ footer .page-link {
     
     .aboutinformation-card h2 {
         font-size: 20px;
+    }
+    .adress svg{
+        width: 32px;
+        height: 32px;
     }
 }
 
