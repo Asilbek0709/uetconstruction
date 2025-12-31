@@ -31,14 +31,7 @@ export default function Slider() {
             loop
             className="heroSwiper"
         >
-            <SwiperSlide>
-                <div className="slide" style={{ backgroundImage: "url('/solar9.jpg')"}}>
-                    <div className="overlay">
-                        <h1>PRESIDENTIAL SCHOOL</h1>
-                        <Link className='hover-link' href={'/projects'}>Projects</Link>             
-                    </div>
-                </div>
-            </SwiperSlide>
+           
                 <SwiperSlide>
                 <div className="slide" style={{ backgroundImage: "url('/solar2.jpg')"}}>
                     <div className="overlay" >
@@ -91,6 +84,14 @@ export default function Slider() {
                 <div className="slide" style={{ backgroundImage: "url('/solar1.jpg')"}}>
                     <div className="overlay">
                         <h1>XORAZM SARIMAY 126MW PROJECT</h1>
+                        <Link className='hover-link' href={'/projects'}>Projects</Link>             
+                    </div>
+                </div>
+            </SwiperSlide> 
+            <SwiperSlide>
+                <div className="slide" style={{ backgroundImage: "url('/solar9.jpg')"}}>
+                    <div className="overlay">
+                        <h1>PRESIDENTIAL SCHOOL</h1>
                         <Link className='hover-link' href={'/projects'}>Projects</Link>             
                     </div>
                 </div>

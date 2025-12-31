@@ -721,7 +721,9 @@ body {
     header {
         display: flex;
     }
-    
+    header img{
+      height: 40px;
+    }
     .navigation {
         margin-right: 0;
         gap: 15px;
@@ -771,6 +773,10 @@ body {
       height: 32px;
     }
     .about {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
         padding: 2rem 1rem;
     }
     
@@ -797,7 +803,7 @@ body {
     }
     
     .home-hover-link, .home-hover-link-special {
-        width: 70%;
+        width: 100%;
         margin-top: 2rem;
     }
     

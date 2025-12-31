@@ -87,6 +87,7 @@ export default function Header() {
 
       
       <nav className={`mobileMenu ${open ? "show" : ""}`}>
+        <Link className="mobile-link" href="/" onClick={() => setOpen(false)}>{t("homepage")}</Link>
         <Link className="mobile-link" href="/about" onClick={() => setOpen(false)}>{t("dropdown-link-about")}</Link>
         <Link className="mobile-link" href="/services" onClick={() => setOpen(false)}>{t("dropdown-link-services")}</Link>
         <Link className="mobile-link" href="/projects" onClick={() => setOpen(false)}>{t("dropdown-link-project")}</Link>
