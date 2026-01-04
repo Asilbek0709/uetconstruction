@@ -66,34 +66,37 @@ export default function AboutPage() {
                       <div className="direction">
                         <div className="direction-info">
                             <p><strong>{t("about-variation-1-title")}</strong></p>
-                            <p></p>
+                            <p>{t("about-variation-1")}</p>
                         </div>
                         <div className="direction-image">
-
+                            <img src="/about1.jpg" alt="" />
                         </div>
                       </div>
                       <div className="direction">
                         <div className="direction-info">
-
+                            <p><strong>{t("about-variation-2-title")}</strong></p>
+                            <p>{t("about-variation-2")}</p>
                         </div>
                         <div className="direction-image">
-
+                            <img src="/about2.jpg" alt="" />
                         </div>
                       </div>
                       <div className="direction">
                         <div className="direction-info">
-
+                            <p><strong>{t("about-variation-3-title")}</strong></p>
+                            <p>{t("about-variation-3")}</p>
                         </div>
                         <div className="direction-image">
-
+                            <img src="/about3.jpg" alt="" />
                         </div>
                       </div>
                       <div className="direction">
                         <div className="direction-info">
-
+                            <p><strong>{t("about-variation-4-title")}</strong></p>
+                            <p>{t("about-variation-4")}</p>
                         </div>
                         <div className="direction-image">
-
+                          <img src="/about4.png" alt="" />
                         </div>
                       </div>
                     </div>

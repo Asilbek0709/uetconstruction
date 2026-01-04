@@ -505,6 +505,19 @@ body {
     margin-top: 0.5rem;
     border-radius: 8px;
 }
+.direction{
+    display: flex;
+    margin-top: 2rem;
+    gap: 2rem;
+    justify-content: space-between;
+}
+.direction-info{
+    max-width: 40rem;
+}
+.direction-image img{
+    max-height: 20rem;
+    width: 25rem;
+}
 
 /* PROJECTS FILTER */
 .filterContainer {
@@ -1436,6 +1449,10 @@ footer .page-link {
     .adress svg{
         width: 32px;
         height: 32px;
+    }
+    .direction{
+        display: flex;
+        flex-direction: column;
     }
 }
 
