@@ -14,6 +14,45 @@ export default function ProjectsPage() {
   const projects = [
     {
       id: 1,
+      title: t("project-page-title7"),
+      description: t("project-page-title7-desc"),
+      status: "successful",
+      
+      image: "/sliderphoto.jpg",
+      details: {
+        power: "457 MW",
+        scope: t("project-page-title7-desc"),
+        client: "MASDAR",
+      },
+    },
+    {
+      id: 2,
+      title: t("project-page-title8"),
+      description: t("project-page-title8-desc"),
+      status: "successful",
+      image: "/solar20.jpg",
+      
+      details: {
+        power: "250 MW",
+        scope: t("project-page-title8-desc"),
+        client: "MASDAR",
+      },
+    },
+    {
+      id: 3,
+      title: t("project-page-title9"),
+      description: t("project-page-title9-desc"),
+      status: "successful",
+      image: "/solar19.jpg",
+      
+      details: {
+        power: "126 MW",
+        scope: t("project-page-title9-desc"),
+        client: "Voltalia",
+      },
+    },
+    {
+      id: 4,
       title: t("project-page-title1"),
       description: t("project-page-title1-desc"),
       status: "planned",
@@ -27,7 +66,7 @@ export default function ProjectsPage() {
       },
     },
     {
-      id: 2,
+      id: 5,
       title: t("project-page-title2"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -41,7 +80,7 @@ export default function ProjectsPage() {
       },
     },
     {
-      id: 3,
+      id: 6,
       title: t("project-title1"),
       description: t("project-desc1"),
       status: "successful",
@@ -55,7 +94,7 @@ export default function ProjectsPage() {
       },
     },
     {
-      id: 4,
+      id: 7,
       title: t("project-page-title3"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -69,7 +108,7 @@ export default function ProjectsPage() {
       }
     },
         {
-      id: 5,
+      id: 8,
       title: t("project-page-title3"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -83,7 +122,7 @@ export default function ProjectsPage() {
       }
     },
         {
-      id: 6,
+      id: 9,
       title: t("project-page-title5"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -97,7 +136,7 @@ export default function ProjectsPage() {
       }
     },
         {
-      id: 7,
+      id: 10,
       title: t("project-page-title6"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -111,7 +150,7 @@ export default function ProjectsPage() {
       }
     },
         {
-      id: 8,
+      id: 11,
       title: t("project-page-title5"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -125,7 +164,7 @@ export default function ProjectsPage() {
       }
     },
         {
-      id: 9,
+      id: 12,
       title: t("project-page-title2"),
       description: t("project-page-title2-desc"),
       status: "successful",
@@ -139,7 +178,7 @@ export default function ProjectsPage() {
       }
     },
         {
-      id: 10,
+      id: 13,
       title: t("project-title2"),
       description: t("project-page-title2-desc"),
       status: "successful",

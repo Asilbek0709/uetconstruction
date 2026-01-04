@@ -448,7 +448,7 @@ body {
 }
 
 .project-photo-1 {
-    background-image: url("/solar9.jpg");
+    background-image: url("/solar20.jpg");
 }
 
 .project-photo-2 {
@@ -456,7 +456,7 @@ body {
 }
 
 .project-photo-3 {
-    background-image: url("/solar7.jpg");
+    background-image: url("/sliderphoto.jpg");
 }
 
 .project-photo-4 {
@@ -1055,6 +1055,25 @@ footer .page-link {
     max-width: 400px;
     position: relative;
 }
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: #fff;
+  width: 450px;
+  max-height: 80vh;      /* 🔥 ограничиваем высоту */
+  overflow-y: auto;     /* 🔥 включаем скролл */
+  padding: 24px;
+  border-radius: 12px;
+  position: relative;
+}
 
 .close-btn {
     position: absolute;
@@ -1172,7 +1191,9 @@ footer .page-link {
     .projects {
         padding: 0.5rem;
     }
-    
+    .modal-content{
+        max-width: 350px;
+    }
     .projects-container {
         grid-template-columns: 1fr;
         gap: 2rem;

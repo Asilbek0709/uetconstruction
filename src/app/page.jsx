@@ -117,10 +117,10 @@ export default function Home() {
                   </div>
                   <div className="project-info">
                     <div className="project-tittle">
-                      <h1>{t("project-title3")}</h1>
+                      <h1>{t("project-page-title7")}</h1>
                     </div>
                     <div className="project-desc">
-                      <p>{t("project-desc1")}</p>
+                      <p>{t("project-page-title7-desc-reduced")}</p>
                     </div>
                     <Link href={"/projects"} className="more-info"> 
                       {t("learn-more")}
@@ -139,10 +139,10 @@ export default function Home() {
                   </div>
                   <div className="project-info">
                     <div className="project-tittle">
-                      <h1>{t("project-title1")}</h1>
+                      <h1>{t("project-page-title8")}</h1>
                     </div>
                     <div className="project-desc">
-                      <p>{t("project-desc1")}</p>
+                      <p>{t("project-page-title8-desc-reduced")}</p>
                     </div>
                     <Link href={"/projects"} className="more-info"> 
                       {t("learn-more")}
