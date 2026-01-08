@@ -113,25 +113,19 @@ export default function Products() {
                     </div>
                     <div className="product">
                         <div className="product-photo">
-                            <img src="/pedestrian-lamps.jpg" alt="" />
-                        </div>
-                        <div className="product-info">
-                            <p className="product-type"><strong>{t("street-lamps")}</strong></p> <br />
-                            <p style={{maxWidth: "15rem"}}>{t("pedestrian")}</p>  
-                        </div>
-                    </div>
-                    <div className="product">
-                        <div className="product-photo">
+                            <img s src="/pedestrian-lamps.jpg" alt="" />
                             <img src="/streer-lamp.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("street-lamps")}</strong></p> <br />
-                            <p style={{maxWidth: "15rem"}}>{t("street")}</p> 
+                            <p style={{maxWidth: "15rem"}}>{t("pedestrian")}</p>
+                            <p style={{maxWidth: "15rem"}}>{t("street")}</p>   
                         </div>
                     </div>
                     <div className="product">
                         <div className="product-photo">
                             <img src="/wide-lamps.jpg" alt="" />
+                            <img src="/wide-lamp2.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("street-lamps")}</strong></p> <br />
@@ -141,6 +135,7 @@ export default function Products() {
                     <div className="product">
                         <div className="product-photo">
                             <img src="/magistral-lamps.jpg" alt="" />
+                            <img src="/lamp.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("street-lamps")}</strong></p> <br />
@@ -150,6 +145,7 @@ export default function Products() {
                     <div className="product">
                         <div className="product-photo">
                             <img src="/solar-lamp.jpg" alt="" />
+                            <img src="/solar-lamp2.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("street-lamps")}</strong></p> <br />
@@ -159,6 +155,7 @@ export default function Products() {
                     <div className="product">
                         <div className="product-photo">
                             <img src="/wind-generator.jpg" alt="" />
+                            <img src="/wind-generator2.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("wind-generators")}</strong></p> <br />
@@ -167,7 +164,7 @@ export default function Products() {
                         </div>
                     </div>
                     <div className="product">
-                        <div className="product-photo">
+                        <div className="product-photo-alone">
                             <img src="/home-heater.jpg" alt="" />
                         </div>
                         <div className="product-info">
@@ -176,7 +173,7 @@ export default function Products() {
                         </div>
                     </div>
                     <div className="product">
-                        <div className="product-photo">
+                        <div cclassName="product-photo-alone">
                             <img src="/fabric-heater.jpg" alt="" />
                         </div>
                         <div className="product-info">
@@ -185,7 +182,7 @@ export default function Products() {
                         </div>
                     </div>
                     <div className="product">
-                        <div className="product-photo">
+                        <div className="product-photo-alone">
                             <img src="/home-pump.jpg" alt="" />
                         </div>
                         <div className="product-info">
@@ -194,7 +191,7 @@ export default function Products() {
                         </div>
                     </div>
                     <div className="product">
-                        <div className="product-photo">
+                        <div className="product-photo-alone">
                             <img src="/fabric-pump.jpg" alt="" />
                         </div>
                         <div className="product-info">

@@ -1,5 +1,5 @@
 {
-    "homepage": "Homepage",
+    "homepage": "Home",
     "dropdown-link-about": "About",
     "dropdown-link-services": "Services",
     "dropdown-link-project": "Projects",
@@ -134,5 +134,11 @@
     "half-fabric-pump": "Commercial / semi-industrial",
     "fabric-pump": "Industrial-grade",
     "upper": "and above",
-    "hero": "Protecting nature, strengthening unity, using natural resources wisely, and leaving a clean and safe environment for future generations is our duty."
+    "hero": "Protecting nature, strengthening unity, using natural resources wisely, and leaving a clean and safe environment for future generations is our duty.",
+    "project-planned1": "Implementation of a high-capacity mega solar energy project in Navoiy Region",
+    "project-planned2": "Commencement of a 500 MW solar photovoltaic power plant construction in Samarkand Region",
+    "project-planned3": "Development and implementation of a large-scale mega project in Qashqadaryo Region",
+    "project-planned1-desc": "Mega solar energy project in Navoiy Region",
+    "project-planned2-desc": "500 MW solar photovoltaic power plant in Samarkand Region",
+    "project-planned3-desc": "Large-scale mega project in Qashqadaryo Region"
 }

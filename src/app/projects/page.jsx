@@ -149,7 +149,7 @@ export default function ProjectsPage() {
         inverter: "Solax X3-FORTH",
       }
     },
-        {
+    {
       id: 12,
       title: t("project-page-title2"),
       description: t("project-page-title2-desc"),
@@ -163,6 +163,39 @@ export default function ProjectsPage() {
         inverter: "Solax X3-FORTH",
       }
     },
+    {
+      id: 13,
+      title: t("project-planned1-desc"),
+      description: t("project-planned1"),
+      status: "planned",
+      image: "2026planned-project1.jpg",
+      details: {
+        power: "",
+        scope: t("project-desc1"),
+      }
+    },
+    {
+      id: 14,
+      title: t("project-planned2-desc"),
+      description: t("project-planned2"),
+      status: "planned",
+      image: "2026planned-project2.jpg",
+      details: {
+        power: "500MW",
+        scope: t("project-desc1"),
+      }
+    },
+    {
+      id: 15,
+      title: t("project-planned3-desc"),
+      description: t("project-planned3"),
+      status: "planned",
+      image: "2026planned-project3.jpg",
+      details: {
+        power: "",
+        scope: t("project-desc1"),
+      }
+    }
   ]
 
   const [filter, setFilter] = useState("all")

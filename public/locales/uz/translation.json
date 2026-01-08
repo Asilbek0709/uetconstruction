@@ -138,5 +138,11 @@
     "half-fabric-pump": "Tijorat / yarim sanoat",
     "fabric-pump": "Sanoat darajasi",
     "upper": "va undan yuqori",
-    "hero": "Tabiatni asrash, birlikni mustahkamlash, tabiiy resurslardan oqilona foydalanish va kelajak avlod uchun toza hamda xavfsiz muhit qoldirish bizning burchimizdir."
+    "hero": "Tabiatni asrash, birlikni mustahkamlash, tabiiy resurslardan oqilona foydalanish va kelajak avlod uchun toza hamda xavfsiz muhit qoldirish bizning burchimizdir.",
+    "project-planned1": "Navoiy viloyati hududida katta quvvatga ega mega quyosh energetika loyihasini amalga oshirish",
+    "project-planned2": "Samarqand viloyatida 500 MW quvvatga ega quyosh fotoelektrik stansiyasi qurilishini boshlash",
+    "project-planned3": "Qashqadaryo viloyati hududida yirik mega loyihani ishlab chiqish va amalga oshirish",
+    "project-planned1-desc": "Navoiy viloyati mega quyosh energetika loyiha",
+    "project-planned2-desc": "Samarqand viloyati 500 MW quvvat quyosh fotoelektrik stansiya",
+    "project-planned3-desc": "Qashqadaryo viloyati yirik mega loyiha"
 }

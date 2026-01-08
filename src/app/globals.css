@@ -282,10 +282,10 @@ body {
 .about {
     display: flex;
     flex-direction: column;
-    padding: 6rem;
+    padding: 2rem;
     width: 100%;
     max-width: 1400px;
-    margin: 0 auto;
+    margin-left: 5.5rem;
 }
 
 .about h1 {
@@ -576,15 +576,17 @@ body {
 .feedback-info {
     display: flex;
     flex-direction: column;
-    padding: 5rem;
+    padding: 2rem;
     background-color: #6f8697;
     color: #fff;
     gap: 2rem;
     width: 50%;
+    
 }
 
 .feedback-info h1 {
     font-size: 38px;
+    margin-top: 6rem;
 }
 
 .feedback-info p {
@@ -1145,6 +1147,13 @@ footer .page-link {
     width: 14rem;
     height: 14rem;
 }
+.product-photo-alone img{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 20rem;
+}
 .product-type{
     padding: 0.40rem;
     background-color: #213981;
@@ -1212,6 +1221,17 @@ footer .page-link {
     }
     .home-information-card-desc{
         max-width: 30rem;
+    }
+    .video-section{
+        height: 100vh;
+        margin-top: 0;
+        padding: 0;
+    }
+    .video-section::before{
+        height: 25vh;
+    }
+    .video-section h1{
+        font-size: 18px;
     }
     .header img {
         height: 80px;
@@ -1714,7 +1734,15 @@ footer .page-link {
     .marquee-bg-text span {
         font-size: 40px;
     }
-    
+    .video-section{
+     height: 35vh;   
+    }
+    .video-section h1{
+        font-size: 18px;
+    }
+    .video-section::before{
+        height: 35vh;
+    }
     .marquee-arrow-cont {
         padding: 1.5rem;
     }
