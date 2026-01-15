@@ -113,7 +113,7 @@ export default function Products() {
                     </div>
                     <div className="product">
                         <div className="product-photo">
-                            <img s src="/pedestrian-lamps.jpg" alt="" />
+                            <img src="/pedestrian-lamps.jpg" alt="" />
                             <img src="/streer-lamp.jpg" alt="" />
                         </div>
                         <div className="product-info">

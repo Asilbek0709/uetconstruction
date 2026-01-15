@@ -155,7 +155,7 @@ export default function Contact() {
         <iframe
           className='google-map'
           src=
-          "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d377.75225364972243!2d72.35796137763643!3d40.76162819124783!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38bcece90bd61d69%3A0x844968c0dcf151c7!2z0JDQs9GA0L7QsdCw0L3Qug!5e0!3m2!1sru!2s!4v1767096115077!5m2!1sru!2s"
+          "https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d377.7507805405403!2d72.35747170858144!3d40.76188739283493!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2sus!4v1768465597605!5m2!1sru!2sus" 
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
