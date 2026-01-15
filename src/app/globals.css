@@ -5,10 +5,7 @@
 }
 body {
     background-color: #f4f4f4;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     overflow-x: hidden;
     width: 100%;
     min-height: 100vh;
@@ -52,7 +49,9 @@ body {
     text-decoration: none;
     border-radius: 4px;
 }
-
+.video-section::before{
+  pointer-events: none;
+}
 .hover-link:hover {
     background-color: #fff;
     border: 0.5px solid #213981;
@@ -201,18 +200,31 @@ body {
 .heroSwiper {
     width: 100%;
     max-width: 100vw;
-    height: 105vh;
+    height: 110vh;
     margin-top: 2rem;
+    justify-content: center;
+    align-items: center;
 }
+.swiper-wrapper-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: hidden; /* 🔥 КЛЮЧ */
+  position: relative;
+  height: 115vh;
+  align-items: center;
+}
+
 .swiper-buttons-top {
   position: absolute;
-  top: -40px; /* над слайдером */
+  top: -75px; /* над слайдером */
   left: 93%; /* центрируем контейнер */
   transform: translateX(-50%); /* смещаем на половину ширины */
   display: flex;
   gap: 10px; /* расстояние между кнопками */
   z-index: 10;
   flex-direction: row-reverse;
+  align-items: center;
 }
 
 .swiper-buttons-top .swiper-prev,
@@ -227,9 +239,9 @@ body {
 }
 .heroSwiper .swiper-button-next,
 .heroSwiper .swiper-button-prev {
-  display: none !important;
+  opacity: 0;
+  pointer-events: none;
 }
-
 .slide {
     width: 100%;
     height: 80vh;
@@ -1189,6 +1201,7 @@ footer .page-link {
     background-color: #fff;
     border-radius: 0.5rem;
     border: 0.5px solid #213981;
+    max-width: 15rem;
 }
 .product-photo img{
     width: 14rem;
@@ -1294,7 +1307,12 @@ footer .page-link {
     }
     
     .heroSwiper {
-        height: 50vh;
+        height: 90vh;
+        margin-top: 2rem;
+    }
+    .swiper-buttons-top{
+        left: 80%;
+        top: -60px;
     }
     
     .slide {
@@ -1614,7 +1632,7 @@ footer .page-link {
     }
     
     .heroSwiper {
-        height: 60vh;
+        height: 90vh;
     }
     
     .slide {

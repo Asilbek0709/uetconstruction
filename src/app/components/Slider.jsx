@@ -27,16 +27,42 @@ export default function Slider() {
   <Swiper
     modules={[Navigation, Pagination, Autoplay]}
     navigation={{
-    nextEl: ".swiper-next",
-    prevEl: ".swiper-prev",
-    disabledClass: "swiper-button-disabled"
+        prevEl: ".swiper-prev",
+        nextEl: ".swiper-next",
     }}
-    autoplay={{ delay: 3000, disableOnInteraction: false }}
+    autoplay={{ delay: 5000, disableOnInteraction: false }}
     loop
-    slidesPerView={6}
     spaceBetween={20}
     slidesPerGroup={1}
     className="heroSwiper"
+    breakpoints={{
+  0: {
+    slidesPerView: 2,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    spaceBetween: 10,
+  },
+  480: {
+    slidesPerView: 2,
+    centeredSlides: true,
+    centeredSlidesBounds: true,
+    spaceBetween: 10,
+  },
+  768: {
+    slidesPerView: 2,
+    centeredSlides: false,
+  },
+  1024: {
+      slidesPerView: 5,
+      centeredSlides: false,
+      spaceBetween: 18,
+    },
+    1280: {
+      slidesPerView: 6,
+      centeredSlides: false,
+      spaceBetween: 20,
+    },
+}}
   >
                 <SwiperSlide>
                 <div className="product">

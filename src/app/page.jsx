@@ -50,8 +50,12 @@ export default function Home() {
                       </div>
                     </div>
           </div>
+          <div className="swiper-wrapper-container">
           <h1 className='home-products'>{t("home-hover-link-products")}</h1>
-          <Slider></Slider>
+          
+            <Slider className="heroSwiper">
+            </Slider>
+          </div>
           <div className="home-about-variations">
             <Link className='home-service-link' href={'/services'}>
               <div className="service-card">
