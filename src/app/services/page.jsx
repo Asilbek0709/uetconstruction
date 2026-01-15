@@ -63,6 +63,50 @@ export default function Services() {
                 </div>
                 <img src="/service4.jpg" alt="" />
               </div>
+              <div className="services-card">
+                <div className="services-information">
+                  <div className="service-tittle">
+                    <h1>5. {t("about-variation-1-title")}:</h1>
+                  </div>
+                  <div className="service-desc">
+                    <p style={{fontSize: "20px"}}>{t("about-variation-1")}</p>
+                  </div>
+                </div>
+                <img src="/about1.jpg" alt="" />
+              </div>
+              <div className="services-card">
+                <div className="services-information">
+                  <div className="service-tittle">
+                    <h1>6. {t("about-variation-2-title")}:</h1>
+                  </div>
+                  <div className="service-desc">
+                    <p style={{fontSize: "20px"}}>· {t("about-variation-2")}</p>
+                  </div>
+                </div>
+                <img src="/about2.jpg" alt="" />
+              </div>
+              <div className="services-card">
+                <div className="services-information">
+                  <div className="service-tittle">
+                    <h1>7. {t("about-variation-3-title")}:</h1>
+                  </div>
+                  <div className="service-desc">
+                    <p style={{fontSize: "20px"}}>{t("about-variation-3")}</p>
+                  </div>
+                </div>
+                <img src="/about3.jpg" alt="" />
+              </div>
+              <div className="services-card">
+                <div className="services-information">
+                  <div className="service-tittle">
+                    <h1>8. {t("about-variation-4-title")}:</h1>
+                  </div>
+                  <div className="service-desc">
+                    <p style={{fontSize: "20px"}}>{t("about-variation-4")}</p>
+                  </div>
+                </div>
+                <img src="/about4.jpg" alt="" />
+              </div>
             </div>
         </main>
       </div>

@@ -104,6 +104,7 @@ export default function AboutPage() {
                             <strong>3.</strong> Baihai Solar <br />
                             <strong>4.</strong> Get Green Energy <br />
                             <strong>5.</strong> Arif Solar <br />
+                            <strong>6.</strong> Weld space <br />
                             <strong>{t("uni")}</strong> <br />
                             {t("univer")}
                           </p>

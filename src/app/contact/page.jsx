@@ -21,8 +21,8 @@ export default function Contact() {
         <div className="location-info">
           <div className="phone">
             <svg 
-              width="32" 
-              height="32" 
+              width="28" 
+              height="28" 
               viewBox="0 0 32 32" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
@@ -51,13 +51,13 @@ export default function Contact() {
             </svg>
             <div className="phone-number">
               <p style={{color: "#5d5d5d"}}>{t("colored-phone")}</p>
-              <p style={{fontWeight: "bold"}}>+998 77 443 00 33</p>
+              <p style={{fontWeight: "bold"}}>+998 (77) 260-26-26; <br /> +998 (77)-179-20-20</p>
             </div>
           </div>
           <div className="email">
           <svg 
-            width="32" 
-            height="32" 
+            width="28" 
+            height="28" 
             viewBox="0 0 32 32" 
             fill="none" 
             xmlns="http://www.w3.org/2000/svg"
@@ -98,8 +98,8 @@ export default function Contact() {
           </div>
           <div className="adress">
             <svg 
-              width="54" 
-              height="64" 
+              width="28" 
+              height="28" 
               viewBox="0 0 32 32" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"
@@ -126,8 +126,8 @@ export default function Contact() {
           </div>
           <div className="hours">
             <svg 
-              width="32" 
-              height="32" 
+              width="28" 
+              height="28" 
               viewBox="0 0 32 32" 
               fill="none" 
               xmlns="http://www.w3.org/2000/svg"

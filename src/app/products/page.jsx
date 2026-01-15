@@ -53,7 +53,7 @@ export default function Products() {
                     </div>
                     <div className="product">
                         <div className="product-photo">
-                            <img src="/product4.jpg" alt="" />
+                            <img src="/product4.png" alt="" />
                             <img src="/product12.jpg" alt="" />
                         </div>
                         <div className="product-info">
@@ -74,7 +74,7 @@ export default function Products() {
                     <div className="product">
                         <div className="product-photo">
                             <img src="/product6.jpg" alt="" />
-                            <img src="/product14.jpg" alt="" />
+                            <img src="/product18.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("invertor")}</strong></p> <br />
@@ -84,7 +84,7 @@ export default function Products() {
                     <div className="product">
                         <div className="product-photo">
                             <img src="/product7.jpg" alt="" />
-                            <img src="/product18.jpg" alt="" />
+                            <img src="/product14.jpg" alt="" />
                         </div>
                         <div className="product-info">
                             <p className="product-type"><strong>{t("invertor")}</strong></p> <br />
@@ -160,7 +160,7 @@ export default function Products() {
                         <div className="product-info">
                             <p className="product-type"><strong>{t("wind-generators")}</strong></p> <br />
                             <p style={{maxWidth: "15rem"}}> <strong>{t("wind-home")}</strong> <br /> 1 kVt - 10 kVt </p> <br />
-                            <p style={{maxWidth: "15rem"}}> <strong>{t("wind-fabrics")}</strong> <br /> 10 kVt - 2    0 kVt </p> 
+                            <p style={{maxWidth: "15rem"}}> <strong>{t("wind-fabrics")}</strong> <br /> 10 kVt - 50 kVt </p> 
                         </div>
                     </div>
                     <div className="product">
@@ -186,7 +186,7 @@ export default function Products() {
                             <img src="/home-pump.jpg" alt="" />
                         </div>
                         <div className="product-info">
-                            <p className="product-type"><strong>{t("heater")}</strong></p> <br />
+                            <p className="product-type"><strong>{t("pumper")}</strong></p> <br />
                             <p style={{maxWidth: "15rem"}}> <strong>{t("home-pump")}</strong> <br /> <strong>3 - 6 kVt →</strong>{t("home-pump-variation1")} <br /> <strong>8 - 12 kVt →</strong> {t("home-pump-variation2")} <br /> <strong>14 – 18 kVt →</strong> {t("home-pump-variation3")} </p> <br />
                         </div>
                     </div>
@@ -195,7 +195,7 @@ export default function Products() {
                             <img src="/fabric-pump.jpg" alt="" />
                         </div>
                         <div className="product-info">
-                            <p className="product-type"><strong>{t("heater")}</strong></p> <br />
+                            <p className="product-type"><strong>{t("pumper")}</strong></p> <br />
                             <p style={{maxWidth: "15rem"}}> <strong>{t("half-fabric-pump")}</strong> <br /> 20 - 30 kVt <br /> 40 – 60 kVt <br /> 80 – 120 kVt <br /> <strong>{t("fabric-pump")}</strong> <br /> 150 – 500 kVt <br /> 1 MW (1000 kVt) {t("upper")}  </p> <br />
                         </div>
                     </div>
